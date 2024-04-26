@@ -1,0 +1,6 @@
+package com.example.smsbackend.userException;
+
+public class ResourceNotFound extends RuntimeException{
+	
+
+}

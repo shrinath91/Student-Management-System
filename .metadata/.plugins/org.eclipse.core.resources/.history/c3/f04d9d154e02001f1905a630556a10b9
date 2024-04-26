@@ -1,0 +1,5 @@
+package com.example.smsbackend.service;
+
+public interface StudentService1 {
+
+}

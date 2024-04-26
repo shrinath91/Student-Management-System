@@ -1,0 +1,12 @@
+package com.example.smsbackend.service;
+
+import com.example.smsbackend.dto.StudentDto;
+import com.example.smsbackend.entity.Student;
+
+
+
+public interface StudentService {
+	public StudentDto createStudent(StudentDto StudentDto);
+
+	public StudentDto save(StudentDto std);
+}

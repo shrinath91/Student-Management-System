@@ -1,0 +1,12 @@
+package com.example.smsbackend.service;
+
+import com.example.smsbackend.entity.Student;
+
+
+
+public interface StudentService {
+	public StudentDto createStudent(Student Student);
+	public StudentDto getStudentById(Long EmployeeId);
+	
+
+}

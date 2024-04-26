@@ -1,0 +1,6 @@
+package com.example.smsbackend.service;
+
+public interface StudentService1 {
+	public StudentDto createStudent(StudentDto studentDto);
+	
+}

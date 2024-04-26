@@ -1,0 +1,9 @@
+package com.example.smsbackend.mapper;
+
+import com.example.smsbackend.dto.StudentDto;
+
+public class StudentMapper {
+	public static StudentDto mapToStudentDto(Student student) {
+		
+	}
+}

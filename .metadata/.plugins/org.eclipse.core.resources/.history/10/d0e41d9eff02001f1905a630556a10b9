@@ -1,0 +1,40 @@
+package com.example.smsbackend.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.smsbackend.dto.StudentDto;
+import com.example.smsbackend.service.StudentService;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@RestController
+@RequestMapping("/api/students")
+public class EmployeeController {
+	
+	private StudentService studentService;
+	
+	//build Add student Rest API
+	@PostMapping
+	public ResponseEntity<StudentDto> createStudent(@RequestBody StudentDto studentDto)
+	{
+		StudentDto savedStudent = studentService.createStudent(studentDto);
+		return new ResponseEntity<>(savedStudent, HttpStatus.CREATED);
+	}
+	
+	
+//	//build Get Student Rest API
+//	public ResponseEntity<StudentDto> getStudentById(Long StudId)
+//	{
+//		studentService.
+//		return ;
+//		
+//	}
+	
+	
+}

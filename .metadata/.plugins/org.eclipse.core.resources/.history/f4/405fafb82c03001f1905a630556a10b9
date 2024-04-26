@@ -1,0 +1,32 @@
+package com.example.smsbackend.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.example.smsbackend.entity.Student;
+import com.example.smsbackend.repository.StudentRepository;
+import com.example.smsbackend.userException.ResourceNotFoundException;
+
+import lombok.AllArgsConstructor;
+
+@Service	
+@AllArgsConstructor
+public class StudentServiceImpl{
+
+	private StudentRepository studentRepository;
+	
+	public Student createStudent(Student student) {
+//		Student student = StudentMapper.mapToStudent(StudentDto);
+		Student savedStudent = studentRepository.save(student);
+//		StudentDto studentdto = StudentMapper.mapToStudentDto(savedStudent);
+		return savedStudent;
+	}
+	
+	public Student getStudentById(Long StudentId) {
+		Student student = studentRepository.findById(StudentId)
+		 	.orElseThrow(()->new ResourceNotFoundException("Employee not exist: "+StudentId));
+		return student;
+//		return StudentMapper.mapToStudentDto(student);
+	}
+	
+
+}

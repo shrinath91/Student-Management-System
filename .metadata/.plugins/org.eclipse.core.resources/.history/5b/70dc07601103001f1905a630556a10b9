@@ -1,0 +1,10 @@
+package com.example.smsbackend.service;
+
+import com.example.smsbackend.dto.StudentDto;
+
+
+
+public interface StudentService {
+	public StudentDto createStudent(StudentDto StudentDto);
+
+}

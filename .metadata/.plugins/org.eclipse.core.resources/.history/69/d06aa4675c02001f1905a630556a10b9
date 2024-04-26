@@ -1,0 +1,16 @@
+package com.example.smsbackend.mapper;
+
+import com.example.smsbackend.dto.StudentDto;
+import com.example.smsbackend.entity.Student;
+
+public class StudentMapper {
+	
+	public static StudentDto mapToStudentDto(Student student) {
+		return new StudentDto(student.getId(),student.getFname(),student.getLname(),student.getEmail());
+	}
+	
+	public static Student mapToStudent(StudentDto studentdto) {
+		return new Student(studentdto.getId(),studentdto.getFname(),studentdto.getLname(),studentdto.getEmail() );
+		
+	}
+}

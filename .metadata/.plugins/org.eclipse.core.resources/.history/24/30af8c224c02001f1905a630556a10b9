@@ -1,0 +1,5 @@
+package com.example.smsbackend.dto;
+
+public class StudentDto {
+
+}
